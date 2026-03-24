@@ -1,0 +1,613 @@
+/* /Layout/MainLayout.razor.rz.scp.css */
+.page[b-6x2xymhgnv] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-6x2xymhgnv] {
+    flex: 1;
+}
+
+
+
+.top-row[b-6x2xymhgnv] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-6x2xymhgnv]  a, .top-row[b-6x2xymhgnv]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-6x2xymhgnv]  a:hover, .top-row[b-6x2xymhgnv]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-6x2xymhgnv]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-6x2xymhgnv] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-6x2xymhgnv]  a, .top-row[b-6x2xymhgnv]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-6x2xymhgnv] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-6x2xymhgnv] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-6x2xymhgnv] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-6x2xymhgnv]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-6x2xymhgnv], article[b-6x2xymhgnv] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Pages/Dashboard.razor.rz.scp.css */
+
+        body[b-1eewp5te7m], html[b-1eewp5te7m] {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* Prevents scrolling on the welcome screen */
+        }
+        /* 2. THE FIX: Aggressive Link Reset */
+        /* This ensures the underline NEVER appears and the color stays white */
+        a.main-wrapper[b-1eewp5te7m], 
+        a.main-wrapper:link[b-1eewp5te7m], 
+        a.main-wrapper:visited[b-1eewp5te7m], 
+        a.main-wrapper:hover[b-1eewp5te7m], 
+        a.main-wrapper:active[b-1eewp5te7m] {
+            text-decoration: none !important; 
+            color: white !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        /* 2. The Background Image with Fade/Overlay */
+        .hero-bg[b-1eewp5te7m] {
+            background-color: aliceblue;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 3. The Text Box with Animation */
+        .fade-in-box[b-1eewp5te7m] {
+            background: rgba(0, 34, 255, 0.721); /* Semi-transparent glass effect */
+                    /* Modern blur effect */
+            padding: 3rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgb(231, 98, 98);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            
+            /* Animation properties */
+            opacity: 0;
+            animation: fadeInTransition-b-1eewp5te7m 0.5s ease-in forwards;
+        }
+        .fade-in-box:hover[b-1eewp5te7m] {
+            background: rgba(255, 255, 255, 0.359);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        h1[b-1eewp5te7m] {
+            font-size: 3rem;
+            margin-top: 250px;
+            margin-bottom: 250px;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
+        p[b-1eewp5te7m] {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* 4. The Keyframe for Fading In */
+        @keyframes fadeInTransition-b-1eewp5te7m {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Subtle slide-up effect */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+/* /Pages/Login.razor.rz.scp.css */
+/* Container for the entire viewport */
+.login-page-wrapper[b-eaks989gw7] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1rem;
+}
+
+/* The Login Card */
+.login-card[b-eaks989gw7] {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Header Styling */
+.login-header[b-eaks989gw7] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h3[b-eaks989gw7] {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Elements */
+.form-floating[b-eaks989gw7] {
+    margin-bottom: 1.25rem;
+}
+
+.form-control[b-eaks989gw7] {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus[b-eaks989gw7] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+}
+
+/* Custom Button */
+.btn-primary-custom[b-eaks989gw7] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-primary-custom:hover[b-eaks989gw7] {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.btn-primary-custom:active[b-eaks989gw7] {
+    transform: translateY(0);
+}
+
+/* Validation Messages (Blazor Specific) */
+.validation-message[b-eaks989gw7] {
+    font-size: 0.85rem;
+    color: #dc3545;
+    margin-top: 0.25rem;
+}
+
+/* Utility Links */
+.footer-links[b-eaks989gw7] {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.footer-links a[b-eaks989gw7] {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.footer-links a:hover[b-eaks989gw7] {
+    text-decoration: underline;
+}
+/* /Pages/LoginINV.razor.rz.scp.css */
+/* Container for the entire viewport */
+.login-page-wrapper[b-shiw2d568e] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 1rem;
+}
+
+/* The Login Card */
+.login-card[b-shiw2d568e] {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Header Styling */
+.login-header[b-shiw2d568e] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h3[b-shiw2d568e] {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Elements */
+.form-floating[b-shiw2d568e] {
+    margin-bottom: 1.25rem;
+}
+
+.form-control[b-shiw2d568e] {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus[b-shiw2d568e] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+}
+
+/* Custom Button */
+.btn-primary-custom[b-shiw2d568e] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-primary-custom:hover[b-shiw2d568e] {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.btn-primary-custom:active[b-shiw2d568e] {
+    transform: translateY(0);
+}
+
+/* Validation Messages (Blazor Specific) */
+.validation-message[b-shiw2d568e] {
+    font-size: 0.85rem;
+    color: #dc3545;
+    margin-top: 0.25rem;
+}
+
+/* Utility Links */
+.footer-links[b-shiw2d568e] {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.footer-links a[b-shiw2d568e] {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.footer-links a:hover[b-shiw2d568e] {
+    text-decoration: underline;
+}
+/* /Pages/Orderservices.razor.rz.scp.css */
+/* Container and Background */
+.container[b-iaxu57h5cr] {
+    max-width: 900px;
+    animation: fadeIn-b-iaxu57h5cr 0.5s ease-in-out;
+}
+
+@keyframes fadeIn-b-iaxu57h5cr {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page Headers */
+h1[b-iaxu57h5cr] {
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+p.text-center[b-iaxu57h5cr] {
+    color: #6c757d;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The Service Request Card */
+.card[b-iaxu57h5cr] {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.card-body[b-iaxu57h5cr] {
+    padding: 3rem;
+}
+
+/* Form Labels and Inputs */
+.form-label[b-iaxu57h5cr] {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-control[b-iaxu57h5cr], .form-select[b-iaxu57h5cr] {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus[b-iaxu57h5cr], .form-select:focus[b-iaxu57h5cr] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    outline: none;
+}
+
+/* Textarea specific */
+textarea.form-control[b-iaxu57h5cr] {
+    resize: none;
+}
+
+/* Checkbox Styling */
+.form-check[b-iaxu57h5cr] {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.form-check-input[b-iaxu57h5cr] {
+    cursor: pointer;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.25em;
+}
+
+.form-check-label[b-iaxu57h5cr] {
+    cursor: pointer;
+    padding-left: 0.5rem;
+    color: #4a4a4a;
+}
+
+/* Button Styling */
+.btn-lg[b-iaxu57h5cr] {
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary[b-iaxu57h5cr] {
+    background-color: #0d6efd;
+    border: none;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.btn-primary:hover[b-iaxu57h5cr] {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-outline-secondary[b-iaxu57h5cr] {
+    border: 2px solid #dee2e6;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover[b-iaxu57h5cr] {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-color: #ced4da;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body[b-iaxu57h5cr] {
+        padding: 1.5rem;
+    }
+    
+    .btn-lg[b-iaxu57h5cr] {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
+}
+/* /Pages/Register.razor.rz.scp.css */
+/* Container for the entire viewport */
+.register-page-wrapper[b-31m6jhjknm] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem 1rem;
+}
+
+/* The Register Card - slightly wider than Login */
+.register-card[b-31m6jhjknm] {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn-b-31m6jhjknm 0.4s ease-out;
+}
+
+@keyframes fadeIn-b-31m6jhjknm {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styling */
+.register-header[b-31m6jhjknm] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h3[b-31m6jhjknm] {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Elements */
+.form-floating[b-31m6jhjknm] {
+    margin-bottom: 1rem;
+}
+
+.form-control[b-31m6jhjknm] {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus[b-31m6jhjknm] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+}
+
+/* Checkbox Section */
+.form-check[b-31m6jhjknm] {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.form-check-input:checked[b-31m6jhjknm] {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Custom Button */
+.btn-primary-custom[b-31m6jhjknm] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-primary-custom:hover[b-31m6jhjknm] {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+/* Validation Messages */
+.validation-message[b-31m6jhjknm] {
+    font-size: 0.8rem;
+    color: #dc3545;
+    margin-top: 0.2rem;
+}
+
+.footer-links[b-31m6jhjknm] {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.footer-links a[b-31m6jhjknm] {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* /Pages/ServiceHistory.razor.rz.scp.css */
+.customer-summary-ribbon[b-23jr8jb9s9] {
+    display: flex;
+    gap: 2rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #e9ecef;
+}
+
+.summary-item[b-23jr8jb9s9] {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label[b-23jr8jb9s9] {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    font-weight: 700;
+}
+
+.summary-value[b-23jr8jb9s9] {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0d6efd;
+}
+
+/* History List specific to the Customer */
+.order-id[b-23jr8jb9s9] {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #adb5bd;
+}

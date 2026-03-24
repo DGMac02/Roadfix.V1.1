@@ -1,0 +1,88 @@
+@page "/LoginEmailorpasserror"
+@using RoadFix.Services
+@using Supabase
+@using Supabase.Gotrue.Exceptions;
+@inject Supabase.Client supabase
+@inject AuthService AuthService
+@inject NavigationManager Navigation
+
+<div class="login-page-wrapper">
+    <div class="login-card">
+        <div class="login-header">
+            <h3>Sign In</h3>
+            <p class="text-muted">Access your dashboard</p>
+        </div>
+
+        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin" FormName="registerForm">
+            <DataAnnotationsValidator />
+
+             <div class="alert alert-danger" role="alert">
+             Incorrect email or password.
+             </div>-
+
+            <div class="form-floating mb-3">
+                <InputText id="email" class="form-control" @bind-Value="loginModel.Email" placeholder="Email" required/>
+                <label for="email">Email address</label>
+                <ValidationMessage For="@(() => loginModel.Email)" />
+            </div >
+
+            <div class="form-floating mb-3">
+                <InputText id="password" type="password" class="form-control" @bind-Value="loginModel.Password" placeholder="Password" required/>
+                <label for="password">Password</label>
+                <ValidationMessage For="@(() => loginModel.Password)" />
+            </div>
+
+            <button type="submit" class="btn-primary-custom mt-2">Log In</button>
+
+            <div class="footer-links">
+                <p>New here? <a href="/register">Create an account</a></p>
+            </div>
+
+            <div class="footer-links">
+                <p>       <a href="">Forgot Password</a></p>
+            </div>
+
+            <!--<div class="invalid-feedback">
+             Please provide a valid email or password.
+            </div>-->
+
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm] // Add this attribute
+    private LoginModel loginModel{ get; set; }= new LoginModel();
+
+    private async Task HandleLogin()
+    {
+ try
+        {
+            var session = await supabase.Auth.SignIn(loginModel.Email, loginModel.Password);
+            if (session != null)
+            {
+                Navigation.NavigateTo("/dashboard");
+            }
+            else
+            {
+                Navigation.NavigateTo("/LoginEmailorpasserror");
+            }
+        }
+        catch (GotrueException )
+        {
+            // Handle authentication errors (e.g., invalid credentials)
+            
+            Navigation.NavigateTo("/LoginEmailorpasserror");
+        }
+        
+    }
+    
+    
+        
+
+    public class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+}

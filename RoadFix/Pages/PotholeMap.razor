@@ -1,0 +1,17 @@
+
+@page "/pothole-map"
+@inject IJSRuntime JSRuntime
+
+
+<div id="map" style="height: 400px; width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);"></div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Defaulting to a central location (e.g., Johannesburg area)
+            await JSRuntime.InvokeVoidAsync("mapBox.initialize", "map", -26.2041, 28.0473);
+        }
+    }
+}

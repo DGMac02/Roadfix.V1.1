@@ -1,0 +1,79 @@
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* Prevents scrolling on the welcome screen */
+        }
+        /* 2. THE FIX: Aggressive Link Reset */
+        /* This ensures the underline NEVER appears and the color stays white */
+        a.main-wrapper, 
+        a.main-wrapper:link, 
+        a.main-wrapper:visited, 
+        a.main-wrapper:hover, 
+        a.main-wrapper:active {
+            text-decoration: none !important; 
+            color: white !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+        /* 2. The Background Image with Fade/Overlay */
+        .hero-bg {
+            background-color: aliceblue;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 3. The Text Box with Animation */
+        .fade-in-box {
+            background: rgba(0, 34, 255, 0.721); /* Semi-transparent glass effect */
+                    /* Modern blur effect */
+            padding: 3rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgb(231, 98, 98);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            
+            /* Animation properties */
+            opacity: 0;
+            animation: fadeInTransition 0.5s ease-in forwards;
+        }
+        .fade-in-box:hover {
+            background: rgba(255, 255, 255, 0.359);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 250px;
+            margin-bottom: 250px;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* 4. The Keyframe for Fading In */
+        @keyframes fadeInTransition {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Subtle slide-up effect */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

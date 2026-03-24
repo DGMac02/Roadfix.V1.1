@@ -1,0 +1,34 @@
+.customer-summary-ribbon[b-23jr8jb9s9] {
+    display: flex;
+    gap: 2rem;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #e9ecef;
+}
+
+.summary-item[b-23jr8jb9s9] {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-label[b-23jr8jb9s9] {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    font-weight: 700;
+}
+
+.summary-value[b-23jr8jb9s9] {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0d6efd;
+}
+
+/* History List specific to the Customer */
+.order-id[b-23jr8jb9s9] {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #adb5bd;
+}

@@ -1,0 +1,65 @@
+@page "/dashboard"
+@using Postgrest.Attributes
+@using Postgrest
+@using RoadFix.Services
+@using Postgrest.Models
+@inject IJSRuntime JSRuntime
+@inject Supabase.Client Supabase
+@inject NavigationManager Navigation
+<PageTitle>Dashboard - RoadFix</PageTitle>
+
+    <div class="hero-bg">
+        <div class="fade-in-box">
+           <a href= "/Historicservice" class="main-wrapper">
+            <h1>Time Capsule</h1>
+            
+        </a>
+    </div>
+    </div>
+
+    <div class = "hero-bg">
+         <div class="fade-in-box">
+           <a href= "/services" class="main-wrapper">
+            <h1>Time Capsule</h1>
+            
+        </a>
+    </div>
+    </div>
+
+    <div class = "hero-bg">
+         <div class="fade-in-box">
+           <a href= "/" class="main-wrapper">
+            <h1>Time Capsule</h1>
+            
+        </a>
+    </div>
+    
+    </div>
+    <div>
+        <section id="contact" class="text-center">
+        <h2 class="mb-4">Contact Us Today</h2>
+        <p class="mb-4">Ready to fix those potholes? Get in touch for a free assessment and quote.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="bi bi-telephone display-6 text-primary mb-2"></i>
+                <h5>Call Us</h5>
+                <p>(555) 123-ROAD</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-envelope display-6 text-primary mb-2"></i>
+                <h5>Email Us</h5>
+                <p>info@roadsfix.com</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-geo-alt display-6 text-primary mb-2"></i>
+                <h5>Visit Us</h5>
+                <p>123 Road Way<br>City, State 12345</p>
+            </div>
+        </div>
+    </section>
+    </div> 
+    
+        
+  
+
+

@@ -1,0 +1,130 @@
+@page "/Historicservice"
+@using Supabase
+@inject Supabase.Client supabase
+@using System.Security.Claims
+@using Postgrest.Attributes
+@using Postgrest
+@using RoadFix.Services
+@using Postgrest.Models
+@inject NavigationManager navigation
+
+@inject IJSRuntime JSRuntime
+
+
+<div class="history-container">
+    <div class="page-header">
+        <h1>My Service Requests</h1>
+        <p class="text-muted">Personalized history for <strong></strong></p>
+    </div>
+
+    <div class="customer-summary-ribbon">
+        <div class="summary-item">
+            <span class="summary-label">Total Requests</span>
+            <span class="summary-value">@CustomerOrders.Count</span>
+        </div>
+        <div class="summary-item">
+            <span class="summary-label">Resolved</span>
+            <span class="summary-value">@CustomerOrders.Count(o => o.Status == "Completed")</span>
+        </div>
+    </div>
+
+    <div class="history-list">
+        @if (!CustomerOrders.Any())
+        {
+            <div class="text-center py-5">
+                <p>You haven't placed any orders yet.</p>
+                <NavLink href="/order-services" class="btn btn-primary">Report Your First Pothole</NavLink>
+            </div>
+        }
+        else
+        {
+            @foreach (var order in CustomerOrders)
+            {
+                <div class="history-card @GetStatusBorder(order.Status)">
+                    <div class="card-content">
+                        <div class="service-info">
+                            <span class="order-id">#RF-@order.Id.ToString()</span>
+                            <h5>@order.ServiceType</h5> @* Matches source select: Detection, Repair, etc. *@
+                            <div class="service-meta">
+                                <strong>Address:</strong> @order.Adress <br />
+                                <strong>Urgency:</strong> @order.Urgency  <br />
+                                @if (order.Insurance) { <span class="badge bg-info text-dark">Insurance Purpose</span> } 
+                            </div>
+                        </div>
+                        
+                        <div class="text-end">
+                            <span class="status-pill @GetStatusClass(order.Status)">@order.Status</span>
+                            <div class="service-meta mt-2">Placed: @order.Date.ToShortDateString()</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+@code {
+    //private string CustomerEmail = "dumisane@example.com"; // In production, get this from AuthenticationState
+
+    private List<Order> CustomerOrders = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // This is where you would call your C# service: 
+        // CustomerOrders = await RoadFixService.GetOrdersByCustomerAsync(CustomerEmail);
+        
+        await LoadUserOrders();
+    }
+private async Task LoadUserOrders()
+{
+    
+    var session = supabase.Auth.CurrentSession;
+    
+    if (session?.User != null)
+    {
+        // Parse the string ID from the session into a Guid
+        <!--var userId = Guid.Parse(session.User.Id);-->
+        string userId = session.User.Id;
+
+        var response = await supabase
+            .From<Order>()
+            .Filter("Cus_id", Postgrest.Constants.Operator.Equals, userId)
+            .Get();
+
+        CustomerOrders = response.Models;
+        StateHasChanged();
+    }
+    else
+    {
+        // Handle the case where there is no authenticated user
+        Console.WriteLine("No authenticated user found.");
+        navigation.NavigateTo("/login");
+    }
+}
+    private void LoadMockData()
+    {
+        
+    }
+
+    private string GetStatusBorder(string status) => status == "Completed" ? "border-completed" : "border-pending";
+    private string GetStatusClass(string status) => status == "Completed" ? "bg-completed" : "bg-pending";
+    [Table("Order")]
+
+    public class Order :BaseModel
+    {
+        [PrimaryKey("id")]
+        public int Id {get;set;}  
+        [Column("created_at")] public DateTime Date { get; set; } = DateTime.Now;
+        [Column("ServiceType")] public string ServiceType { get; set; } = ""; 
+        [Column("Adress")] public string Adress { get; set; } = ""; 
+        [Column("Status")] public string Status { get; set; } = "Pending"; 
+        [Column("Cus_id")] public string CusId { get; set; } = "";
+
+        [Column("Urgency")] public string Urgency { get; set; } = "Normal";
+        [Column("Insurance")] public bool Insurance { get; set; } = false;
+    }
+   
+
+
+
+}

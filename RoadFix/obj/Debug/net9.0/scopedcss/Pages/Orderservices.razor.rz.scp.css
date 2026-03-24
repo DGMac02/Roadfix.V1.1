@@ -1,0 +1,126 @@
+/* Container and Background */
+.container[b-iaxu57h5cr] {
+    max-width: 900px;
+    animation: fadeIn-b-iaxu57h5cr 0.5s ease-in-out;
+}
+
+@keyframes fadeIn-b-iaxu57h5cr {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page Headers */
+h1[b-iaxu57h5cr] {
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+p.text-center[b-iaxu57h5cr] {
+    color: #6c757d;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The Service Request Card */
+.card[b-iaxu57h5cr] {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.card-body[b-iaxu57h5cr] {
+    padding: 3rem;
+}
+
+/* Form Labels and Inputs */
+.form-label[b-iaxu57h5cr] {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-control[b-iaxu57h5cr], .form-select[b-iaxu57h5cr] {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus[b-iaxu57h5cr], .form-select:focus[b-iaxu57h5cr] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    outline: none;
+}
+
+/* Textarea specific */
+textarea.form-control[b-iaxu57h5cr] {
+    resize: none;
+}
+
+/* Checkbox Styling */
+.form-check[b-iaxu57h5cr] {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.form-check-input[b-iaxu57h5cr] {
+    cursor: pointer;
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.25em;
+}
+
+.form-check-label[b-iaxu57h5cr] {
+    cursor: pointer;
+    padding-left: 0.5rem;
+    color: #4a4a4a;
+}
+
+/* Button Styling */
+.btn-lg[b-iaxu57h5cr] {
+    padding: 0.8rem 2.5rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary[b-iaxu57h5cr] {
+    background-color: #0d6efd;
+    border: none;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.btn-primary:hover[b-iaxu57h5cr] {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-outline-secondary[b-iaxu57h5cr] {
+    border: 2px solid #dee2e6;
+    color: #6c757d;
+}
+
+.btn-outline-secondary:hover[b-iaxu57h5cr] {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border-color: #ced4da;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body[b-iaxu57h5cr] {
+        padding: 1.5rem;
+    }
+    
+    .btn-lg[b-iaxu57h5cr] {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
+}

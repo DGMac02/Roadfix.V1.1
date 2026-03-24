@@ -1,0 +1,104 @@
+/* Container for the entire viewport */
+.register-page-wrapper[b-31m6jhjknm] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem 1rem;
+}
+
+/* The Register Card - slightly wider than Login */
+.register-card[b-31m6jhjknm] {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn-b-31m6jhjknm 0.4s ease-out;
+}
+
+@keyframes fadeIn-b-31m6jhjknm {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Styling */
+.register-header[b-31m6jhjknm] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h3[b-31m6jhjknm] {
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Elements */
+.form-floating[b-31m6jhjknm] {
+    margin-bottom: 1rem;
+}
+
+.form-control[b-31m6jhjknm] {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus[b-31m6jhjknm] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+}
+
+/* Checkbox Section */
+.form-check[b-31m6jhjknm] {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+}
+
+.form-check-input:checked[b-31m6jhjknm] {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Custom Button */
+.btn-primary-custom[b-31m6jhjknm] {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-primary-custom:hover[b-31m6jhjknm] {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+/* Validation Messages */
+.validation-message[b-31m6jhjknm] {
+    font-size: 0.8rem;
+    color: #dc3545;
+    margin-top: 0.2rem;
+}
+
+.footer-links[b-31m6jhjknm] {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.footer-links a[b-31m6jhjknm] {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
