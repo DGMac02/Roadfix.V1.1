@@ -6,6 +6,8 @@
 
 @using RoadFix.Services
 @using System.ComponentModel.DataAnnotations.Schema
+@inject NavigationManager Navigation
+@using System.ComponentModel.DataAnnotations
 
 
 <PageTitle>Order Services - RoadFix</PageTitle>
@@ -109,7 +111,8 @@
                         </div>
 
                         <div class="text-center">
-                            <NavLink href="/dashboard" class="btn btn-primary btn-lg me-3">Submit Request</NavLink>
+                            <button  type="submit" class="btn btn-primary btn-lg me-3", href="/Historicservice">Submit Request</button>
+                            <!-- <NavLink href="/dashboard" class="btn btn-primary btn-lg me-3">Submit Request</NavLink> -->
                             <NavLink href="/dashboard" class="btn btn-outline-secondary btn-lg">Back to Home</NavLink>
                         </div>
                     </EditForm>
@@ -159,7 +162,21 @@
                 issueDescription = recOrder.issueDescription,
                 Insurance = recOrder.Insurance
                 };
-                 await supabase.From<Order>().Insert(model);
+
+                try 
+    {
+       // 2. Write to Supabase 
+        await supabase.From<Order>().Insert(model);
+
+        // 3. Redirect to the dashboard or a success page
+        Navigation.NavigateTo("/Historicservice");
+    }
+    catch (Exception )
+    {
+        // Handle potential errors here (e.g., database offline)
+        Navigation.NavigateTo("/dashboard");
+    }
+             
 
     }
 

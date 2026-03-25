@@ -100,7 +100,7 @@ main[b-6x2xymhgnv] {
         }
         /* 2. The Background Image with Fade/Overlay */
         .hero-bg[b-1eewp5te7m] {
-            background-color: aliceblue;
+            background-color: rgb(255, 255, 255);
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -111,7 +111,7 @@ main[b-6x2xymhgnv] {
 
         /* 3. The Text Box with Animation */
         .fade-in-box[b-1eewp5te7m] {
-            background: rgba(0, 34, 255, 0.721); /* Semi-transparent glass effect */
+            background: #0d6efd; /* Semi-transparent glass effect */
                     /* Modern blur effect */
             padding: 3rem;
             border-radius: 15px;
@@ -119,13 +119,19 @@ main[b-6x2xymhgnv] {
             color: rgb(231, 98, 98);
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+            min-height: 80vh; 
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
             
             /* Animation properties */
             opacity: 0;
             animation: fadeInTransition-b-1eewp5te7m 0.5s ease-in forwards;
         }
         .fade-in-box:hover[b-1eewp5te7m] {
-            background: rgba(255, 255, 255, 0.359);
+            background: #2c72dbfe;
             transform: translateY(-5px);
             border-color: rgba(255, 255, 255, 0.4);
         }

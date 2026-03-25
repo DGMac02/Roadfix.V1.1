@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "RoadFix",
   "resources": {
-    "hash": "sha256-ZwBc0o90jRfmQJvXGw/PKQWumpCa6YYWOaOc3K31V+0=",
+    "hash": "sha256-waAsuu4RAjkLNAJZIc764Rjzmh52ltzYHnYyspaIm2k=",
     "fingerprinting": {
       "Supabase.Functions.w4gz1z4ill.wasm": "Supabase.Functions.wasm",
       "Supabase.Gotrue.gsal9ee3gm.wasm": "Supabase.Gotrue.wasm",
@@ -217,8 +217,8 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "RoadFix.xdhr97u010.wasm": "RoadFix.wasm",
-      "RoadFix.yaz339k5y0.pdb": "RoadFix.pdb"
+      "RoadFix.8z1hrpnc7d.wasm": "RoadFix.wasm",
+      "RoadFix.7va2npwck6.pdb": "RoadFix.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -444,10 +444,10 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "RoadFix.xdhr97u010.wasm": "sha256-O2oGieffKOmjQYe4cxEmqR4/+IQvfgxmRlH3yj4J7po="
+      "RoadFix.8z1hrpnc7d.wasm": "sha256-vGzVs4skaEm9U92EI0au4EYrZVWyZFkQDxGbE7j2Njk="
     },
     "pdb": {
-      "RoadFix.yaz339k5y0.pdb": "sha256-hgNqZh6oDR/KdaKLsirBI6NEk+otvoUrliJaMk6F5A4="
+      "RoadFix.7va2npwck6.pdb": "sha256-gx7SdNJXmtwliUNmqc1cBbUCQ0tSKO7JMKXIzlXTDQo="
     }
   },
   "cacheBootResources": true,

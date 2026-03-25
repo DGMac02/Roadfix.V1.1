@@ -23,7 +23,7 @@
         }
         /* 2. The Background Image with Fade/Overlay */
         .hero-bg {
-            background-color: aliceblue;
+            background-color: rgb(255, 255, 255);
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -42,13 +42,19 @@
             color: rgb(231, 98, 98);
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+            min-height: 80vh; 
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
             
             /* Animation properties */
             opacity: 0;
             animation: fadeInTransition 0.5s ease-in forwards;
         }
         .fade-in-box:hover {
-            background: rgba(255, 255, 255, 0.359);
+            background: #2c72dbfe;
             transform: translateY(-5px);
             border-color: rgba(255, 255, 255, 0.4);
         }
