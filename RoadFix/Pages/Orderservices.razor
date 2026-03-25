@@ -154,7 +154,7 @@
     private async Task LogOrder(){
             var model = new Order
             {
-                Adress = recOrder.Adress,
+                Address = recOrder.Address,
                 Service_Type = recOrder.Service_Type,
                 issueDescription = recOrder.issueDescription,
                 Insurance = recOrder.Insurance
@@ -173,7 +173,7 @@
         public string Province {get; set;} = string.Empty;
 
         public string ZipCode {get; set;} = string.Empty;
-        public string Adress => $"{Street},{City},{Province},{ZipCode}".Trim(',');
+        public string Address => $"{Street},{City},{Province},{ZipCode}".Trim(',');
 
         public string Service_Type {get; set;} = string.Empty;
         public string issueDescription {get; set;} = string.Empty;
@@ -184,8 +184,8 @@
     }
     [Table("Order")]
     class Order :BaseModel{
-        [Column("Adress")]
-        public string Adress {get; set;} = string.Empty;
+        [Column("Address")]
+        public string Address {get; set;} = string.Empty;
 
         [Column("ServiceType")]
         public string Service_Type {get; set;} = string.Empty;

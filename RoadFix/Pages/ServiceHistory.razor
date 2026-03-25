@@ -6,6 +6,7 @@
 @using Postgrest
 @using RoadFix.Services
 @using Postgrest.Models
+@using Supabase.Gotrue
 @inject NavigationManager navigation
 
 @inject IJSRuntime JSRuntime
@@ -46,7 +47,7 @@
                             <span class="order-id">#RF-@order.Id.ToString()</span>
                             <h5>@order.ServiceType</h5> @* Matches source select: Detection, Repair, etc. *@
                             <div class="service-meta">
-                                <strong>Address:</strong> @order.Adress <br />
+                                <strong>Address:</strong> @order.Address <br />
                                 <strong>Urgency:</strong> @order.Urgency  <br />
                                 @if (order.Insurance) { <span class="badge bg-info text-dark">Insurance Purpose</span> } 
                             </div>
@@ -116,8 +117,8 @@ private async Task LoadUserOrders()
         public int Id {get;set;}  
         [Column("created_at")] public DateTime Date { get; set; } = DateTime.Now;
         [Column("ServiceType")] public string ServiceType { get; set; } = ""; 
-        [Column("Adress")] public string Adress { get; set; } = ""; 
-        [Column("Status")] public string Status { get; set; } = "Pending"; 
+        [Column("Address")] public string Address { get; set; } = ""; 
+        [Column("Status")] public string Status { get; set; } = "Complete"; 
         [Column("Cus_id")] public string CusId { get; set; } = "";
 
         [Column("Urgency")] public string Urgency { get; set; } = "Normal";
