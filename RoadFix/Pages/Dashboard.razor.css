@@ -34,7 +34,7 @@
 
         /* 3. The Text Box with Animation */
         .fade-in-box {
-            background: rgba(0, 34, 255, 0.721); /* Semi-transparent glass effect */
+            background: #0d6efd; /* Semi-transparent glass effect */
                     /* Modern blur effect */
             padding: 3rem;
             border-radius: 15px;
