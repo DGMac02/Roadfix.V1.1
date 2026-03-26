@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoadFix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7b77e785540d63353789c817b0f2dd1cfbc495a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6dd991584fd1270aaf846eaf7d6a57e9978b27d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoadFix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoadFix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
