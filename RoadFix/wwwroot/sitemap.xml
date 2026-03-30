@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://your-roadfix-app.pages.dev/</loc>
+      <loc>https://roadfix.com/</loc>
       <lastmod>2026-05-20</lastmod>
    </url>
    <url>
-      <loc>https://your-roadfix-app.pages.dev/services</loc>
+      <loc>https://www.roadsfix.com/services</loc>
       <lastmod>2026-05-20</lastmod>
    </url>
    <url>
-      <loc>https://your-roadfix-app.pages.dev/dashboard</loc>
+      <loc>https://team.roadsfix.com/dashboard</loc>
       <lastmod>2026-05-20</lastmod>
    </url>
 </urlset>
