@@ -1,21 +1,37 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
-      - name: Publish
+          dotnet-version: 8.0.x 
+
+      - name: Publish Blazor App
         run: dotnet publish -c Release -o release
-      - name: Upload to Pages
-        uses: actions/upload-pages-artifact@v2
+
+      - name: Add .nojekyll
+        run: touch release/wwwroot/.nojekyll
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: release/wwwroot
-      - name: Deploy
-        uses: actions/deploy-pages@v2
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
