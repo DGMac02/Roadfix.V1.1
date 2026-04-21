@@ -1172,11 +1172,8 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98m
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-2uta9slvu5.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-4dcrmp7mbl.gz
 =======
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\RoadFix.sourcelink.json
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\u5m8nsp19r-8ckefd6jnx.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\479k12n32c-ley4mojh87.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\xuyj1sh1ym-ley4mojh87.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\9iz6piselv-3nheakfqco.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.h625a8t4vp.wasm
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.59x1qnbmuj.pdb
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.h625a8t4vp.wasm.gz
@@ -1185,10 +1182,4 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98m
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-59x1qnbmuj.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-qm86wc3ujc.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\ryac5g5v18-ovmajlbe2u.gz
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
-=======
->>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
-=======
 >>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
