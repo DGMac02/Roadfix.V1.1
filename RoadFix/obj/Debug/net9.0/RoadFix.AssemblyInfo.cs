@@ -13,19 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoadFix")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbf9f29e0c8df7f660c3ca92cf33973a3e496f7f")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2b181b2fba488b124b70b72a3edb62fd5b4b0a")]
->>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2b181b2fba488b124b70b72a3edb62fd5b4b0a")]
->>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2b181b2fba488b124b70b72a3edb62fd5b4b0a")]
->>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fef3b53ee3a74dc568623e618dcac4d83233c326")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoadFix")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoadFix")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
