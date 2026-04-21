@@ -1163,10 +1163,10 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\refint\RoadFix.dll
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\RoadFix.pdb
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\ref\RoadFix.dll
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\ryac5g5v18-s9s1ns79av.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zxqjinv0i4.wasm
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zhtwffdn2k.pdb
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zxqjinv0i4.wasm.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zhtwffdn2k.pdb.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98mlz-zxqjinv0i4.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-zhtwffdn2k.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-ghh0t9ft11.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.20pyn7oryp.wasm
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.buj18f7kir.pdb
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.20pyn7oryp.wasm.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.buj18f7kir.pdb.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98mlz-20pyn7oryp.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-buj18f7kir.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-m5bcvownhk.gz

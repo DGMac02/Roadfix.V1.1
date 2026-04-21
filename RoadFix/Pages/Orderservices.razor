@@ -166,12 +166,14 @@
         public bool Insurance {get; set;} = false;
         
     }
-    private string? _mapboxtoken;
+    private string _mapboxtoken = string.Empty;
+ 
+   
 private DotNetObjectReference<Orderservices>? objRef;
 protected override async Task OnAfterRenderAsync(bool firstRender)
 
     {
-        _mapboxtoken = Configuration["MapboxToken"];
+        _mapboxtoken = Configuration["MapboxToken"] ?? "";
         if (firstRender && !string.IsNullOrEmpty(_mapboxtoken))
         {
             // Give the browser a moment to ensure the 'map' div is rendered
