@@ -49,6 +49,8 @@
                 <ValidationMessage For="@(() => regModel.Password)" />
             </div>
 
+
+
             <div class="form-floating">
                 <InputText id="confirmPassword" type="password" class="form-control" @bind-Value="regModel.ConfirmPassword" placeholder="Confirm Password" required/>
                 <label for="confirmPassword"></label>
@@ -96,6 +98,7 @@
     else
     {
         Navigation.NavigateTo("/register");
+   
         // andle registration failure (e.g., show an error message)
     }
 }

@@ -2,17 +2,27 @@
 <html lang="en">
 
 <head>
-    
+<<<<<<< HEAD
+
+=======
+<!--    <meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self' https://pmjkxvdpyvheqdytbcax.supabase.co; 
+               script-src 'self' 'unsafe-inline' 'unsafe-eval'; 
+               style-src 'self' 'unsafe-inline'; 
+               connect-src 'self' https://pmjkxvdpyvheqdytbcax.supabase.co; 
+               img-src 'self' data: https://pmjkxvdpyvheqdytbcax.supabase.co; 
+               frame-src 'self' https://pmjkxvdpyvheqdytbcax.supabase.co;">-->
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" 
-      content="frame-src 'self' https://pmjkxvdpyvheqdytbcax.supabase.co https://www.youtube.com https://js.stripe.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
     <title>RoadFix</title>
     <base href="/" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/svg" href="gemini-svg (6).svg" />
     <link href="RoadFix.styles.css" rel="stylesheet" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
+    
 </head>
 
 <body>
@@ -29,7 +39,115 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
+   
+
     <script src="_framework/blazor.webassembly.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+    <script>
+    let map;
+    let marker;
+    
+window.initRoadfixMap = (helper, token) => {
+    window.roadfixHelper = helper;
+    mapboxgl.accessToken = token;
+
+    // 1. Setup the Map
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [24.9916, -28.4793], 
+        zoom: 5,
+        pitch: 45, // Set initial 3D tilt
+        bearing: -17.6 // Slight rotation for a professional look
+    });
+// 1. Navigation Controls (Zoom in/out + Compass)
+    const nav = new mapboxgl.NavigationControl({
+        visualizePitch: true // Allows users to see 3D perspective
+    });
+    map.addControl(nav, 'top-right');
+
+    // 2. Geolocate Control (Find user's current location)
+    const geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        showUserHeading: true
+    });
+    map.addControl(geolocate, 'top-right');
+
+    // 3. Scale Bar (Useful for measuring distance)
+    const scale = new mapboxgl.ScaleControl({
+        maxWidth: 80,
+        unit: 'metric' // Sets it to meters/km for South Africa
+    });
+    map.addControl(scale);
+    const marker = new mapboxgl.Marker({ color: '#FF0000', draggable: true });
+
+    // 2. The "Linker" Logic
+    // We use an interval to wait until the <mapbox-search-box> is actually in the DOM
+    const attachSearchListener = setInterval(() => {
+        const searchBox = document.querySelector('mapbox-search-box');
+        
+        if (searchBox) {
+            console.log("Roadfix: Search Box linked to Map.");
+            
+            searchBox.addEventListener('retrieve', (event) => {
+                const feature = event.detail.features[0];
+                const coords = feature.geometry.coordinates;
+
+                // Move the camera
+                map.flyTo({
+                    center: coords,
+                    zoom: 17,
+                    essential: true
+                });
+
+                // Drop the pin
+                marker.setLngLat(coords).addTo(map);
+
+                marker.on('dragend',async () => {
+                    const lngLat = marker.getLngLat();
+                    const lon = lngLat.lng;
+                    const lat = lngLat.lat;
+                    
+
+                    const query = `https://api.mapbox.com/geocoding/v5/mapbox.places/${lon},${lat}.json?access_token=${token}`;
+
+                    try{
+                        const response = await fetch(query);
+                        const data = await response.json();
+                        const address = data.features[0].place_name;
+                        const searchBox = document.querySelector('mapbox-search-box');
+                        
+        if (searchBox) {
+            searchBox.value = address;
+        }
+        if (window.roadfixHelper) {
+                window.roadfixHelper.invokeMethodAsync('ReceiveAddress', address);
+            }
+
+        // 5. Send it to your Blazor C# Code
+        // Assuming you passed 'dotnetHelper' into your init function
+       
+
+        console.log(`Pin dropped at: ${address} (${lat}, ${lon})`);
+    } catch (error) {
+        console.error("Error retrieving address:", error);
+    }
+                    
+                });
+            });
+            
+
+            clearInterval(attachSearchListener); // Stop looking once found
+        }
+    }, 500); // Check every half-second
+
+    map.on('load', () => map.resize());
+};
+
+</script>
 </body>
 
 </html>

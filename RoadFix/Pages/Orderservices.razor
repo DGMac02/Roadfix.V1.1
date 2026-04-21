@@ -3,11 +3,12 @@
 @using Supabase
 @inject Supabase.Client supabase
 @using Microsoft.VisualBasic
-
+@inject IConfiguration Configuration
 @using RoadFix.Services
 @using System.ComponentModel.DataAnnotations.Schema
 @inject NavigationManager Navigation
 @using System.ComponentModel.DataAnnotations
+@inject IJSRuntime JSRuntime
 
 
 <PageTitle>Order Services - RoadFix</PageTitle>
@@ -18,54 +19,45 @@
 
     <div class="row justify-content-center">
         <div class="col-md-8">
+            <div class="card-body">
+                    <mapbox-search-box id="roadfix-search" access-token="pk.eyJ1Ijoicm9hZHNmaXgiLCJhIjoiY21ucmp3ZHExMDM2YTJxcXl6cHQwZDYzNiJ9.HLly-ID-5Sftsfo_KBoMjQ" placeholder="Let's find Pothole address..." proximity="ip"  ></mapbox-search-box>
+                                     
+                </div>
+               
+
+                
+            
+            
+            <div id="map" style="width: 100%; height: 450px; border-radius: 12px; border: 1px solid #ccc;">
+                
+                </div>
+                
             <div class="card">
-                <div class="card-body">
-                    <EditForm Model="@recOrder" OnValidSubmit="LogOrder" FormName="orderForm">
-                            <DataAnnotationsValidator />
-                        <!--<<div class="mb-3">
+                
+                
+
+
+            <EditForm Model="@recOrder" OnSubmit="LogOrder" FormName="oderForm">
+                <DataAnnotationsValidator/>
+                
+                <div class="alert alert-info">
+                    Captured Location: @(string.IsNullOrEmpty(recOrder.Address) ? "Move the map pin to select" : recOrder.Address)
+                </div>
+                <div class="mb-3">
                             <label for="name" class="form-label">Full Name *</label>
                             <input type="text" class="form-control" id="name" required>
                         </div>
                             
-                        div class="mb-3">
+                        <div class="mb-3">
                             <label for="email" class="form-label">Email Address *</label>
                             <input type="email" class="form-control" id="email" required>
-                        </div>-->
-
+                        </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Phone Number *</label>
                             <InputText id="phone" type="tel" @bind-Value="recOrder.phone" placeholder="081-234-5678"  required/> 
                             <ValidationMessage For="@(() =>recOrder.phone)" />
                         </div>
-
-                        <div class="mb-3">
-                            
-                            <InputText type="text" @bind-Value="recOrder.Street"class="form-control" id="address" placeholder="123 Main St" required/>
-                            <label for="address" class="form-label">Street Address *</label>
-                            <ValidationMessage For="@(() => recOrder.Street)"/>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="city" class="form-label">City *</label>
-                                <InputText type="text" @bind-Value="recOrder.City" class="form-control" id="city" required />
-                                
-                                <ValidationMessage For="@(() => recOrder.City)"/>
-                                
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label for="state" class="form-label">Province *</label>
-                                <InputText type="text" @bind-Value="recOrder.Province" class="form-control" id="state" required />
-                                <ValidationMessage For="@(() => recOrder.Province)"/>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label for="zip" class="form-label">ZIP Code *</label>
-                                <InputText type="text" @bind-Value="recOrder.ZipCode" class="form-control" id="zip" required />
-                                <ValidationMessage For="@(() => recOrder.ZipCode)"/>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
+                         <div class="mb-3">
                             <label for="serviceType" class="form-label">Service Type *</label>
                             <InputSelect @bind-Value="recOrder.Service_Type" class="form-select" id="serviceType" required>
                                 <option value="">Select a service</option>
@@ -83,16 +75,6 @@
                             
                             <ValidationMessage For="@(() => recOrder.issueDescription)"/>
                         </div>
-
-                <!--      <div class="mb-3">
-                            <label for="urgency" class="form-label">Urgency Level</label>
-                            <select class="form-select" id="urgency">
-                                <option value="normal">Normal (within 1-2 weeks)</option>
-                                <option value="urgent">Urgent (within 3-5 days)</option>
-                                <option value="emergency">Emergency (same day if possible)</option>
-                            </select>
-                        </div>
--->
                         <div class="mb-3 form-check">
                             <InputCheckbox @bind-Value="recOrder.Insurance" class="form-check-input" id="insurance" />
                             <label class="form-check-label" for="insurance">
@@ -101,63 +83,37 @@
                             
                             <ValidationMessage For="@(() => recOrder.Insurance)"/>
                         </div>
-
-                        <div class="mb-3 form-check">
-                            <InputCheckbox @bind-Value="recOrder.newsletter" class="form-check-input" id="newsletter" />
-                            <label class="form-check-label" for="newsletter">
-                                Subscribe to our newsletter for road safety tips and updates
-                            </label>
-                            <ValidationMessage For="@(() => recOrder.newsletter)"/>
-                        </div>
-
                         <div class="text-center">
-                            <button  type="submit" class="btn btn-primary btn-lg me-3", href="/Historicservice">Submit Request</button>
-                            <!-- <NavLink href="/dashboard" class="btn btn-primary btn-lg me-3">Submit Request</NavLink> -->
+                            <button  type="submit" class="btn btn-primary btn-lg me-3", >Submit Request</button>
                             <NavLink href="/dashboard" class="btn btn-outline-secondary btn-lg">Back to Home</NavLink>
                         </div>
-                    </EditForm>
-                </div>
+   
+            </EditForm>
+                
             </div>
         </div>
 
     </div>
-
-    <section id="contact" class="text-center">
-        <h2 class="mb-4">Contact Us Today</h2>
-        <p class="mb-4">Ready to fix those potholes? Get in touch for a free assessment and quote.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <i class="bi bi-telephone display-6 text-primary mb-2"></i>
-                <h5>Call Us</h5>
-                <p>(555) 123-ROAD</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-envelope display-6 text-primary mb-2"></i>
-                <h5>Email Us</h5>
-                <p>info@roadsfix.com</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-geo-alt display-6 text-primary mb-2"></i>
-                <h5>Visit Us</h5>
-                <p>123 Road Way<br>City, State 12345</p>
-            </div>
-        </div>
-    </section>
 </div>
+
 @code {
-    private string Name = string.Empty;
+     private string Name = string.Empty;
     private string CellNumber = string.Empty;
-
-    private String Address = string.Empty;
-
+    
+    private String Address {get; set;} = string.Empty;
+    private String searchQuery = string.Empty;
+    private string currentAddress = string.Empty;
+ 
+    
+    
     [SupplyParameterFromForm] 
 
-    private recordOrder recOrder {get; set;} = new recordOrder ();
+    private recordOrder recOrder {get; set;} = new recordOrder ();         
 
     private async Task LogOrder(){
             var model = new Order
             {
-                Address = recOrder.Address,
+                Address= recOrder.Address,
                 Service_Type = recOrder.Service_Type,
                 issueDescription = recOrder.issueDescription,
                 Insurance = recOrder.Insurance
@@ -184,13 +140,9 @@
         
         public string phone { get; set; } = string.Empty; 
 
-        public string Street {get; set;} = string.Empty;
-        public string City {get; set;} = string.Empty;
-
-        public string Province {get; set;} = string.Empty;
-
-        public string ZipCode {get; set;} = string.Empty;
-        public string Address => $"{Street},{City},{Province},{ZipCode}".Trim(',');
+      
+  
+        public string Address {get; set;} = string.Empty;
 
         public string Service_Type {get; set;} = string.Empty;
         public string issueDescription {get; set;} = string.Empty;
@@ -214,6 +166,36 @@
         public bool Insurance {get; set;} = false;
         
     }
+//private string MapboxToken = "pk.eyJ1Ijoicm9hZHNmaXgiLCJhIjoiY21ucmp3ZHExMDM2YTJxcXl6cHQwZDYzNiJ9.HLly-ID-5Sftsfo_KBoMjQ";
+    private string? _mapboxtoken;
+private DotNetObjectReference<Orderservices>? objRef;
+protected override async Task OnAfterRenderAsync(bool firstRender)
 
+    {
+        _mapboxtoken = Configuration["MapboxToken"];
+        if (firstRender)
+        {
+            // Give the browser a moment to ensure the 'map' div is rendered
+            await Task.Delay(300);
+             objRef = DotNetObjectReference.Create(this);
+   
+            await JSRuntime.InvokeVoidAsync("initRoadfixMap", objRef,_mapboxtoken);
+        }
+    }   
+    public void Dispose() => objRef?.Dispose();
+    [JSInvokable]
+ 
+
+public  void ReceiveAddress(string address)
+    {
+        // This method can be used to receive data from JavaScript if needed
+            recOrder.Address = address;
+            
+
+            StateHasChanged();
+
+           
+
+    }
 
 }

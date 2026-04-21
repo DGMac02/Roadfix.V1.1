@@ -1,88 +1,66 @@
 @page "/dashboard"
-@using Postgrest.Attributes
-@using Postgrest
-@using RoadFix.Services
-@using Postgrest.Models
-@inject IJSRuntime JSRuntime
-@inject Supabase.Client Supabase
-@inject NavigationManager Navigation
-<PageTitle>Dashboard - RoadFix</PageTitle>
+<div class="dashboard-container">
+    <nav class="top-nav">
+        <div class="logo-area">
+            <div class="tech-icon">⚙️</div>
+            <h1>ROADS<span class="blue-text">FIX</span> <small>SMART OPS</small></h1>
+        </div>
+        <div class="nav-actions">
+            <span class="status-indicator">● LIVE OPS: BLOEMFONTEIN</span>
+            <NavLink href="/services" class="btn-quote">Order Service</NavLink>
+            <NavLink href="/Historicservice" class="btn-quote">Service History</NavLink>
 
-<HeadContent>
-    <style>
-        .dashboard-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem;
-        }
+        </div>
 
-        .dashboard-content {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-        }
-    </style>
-<div class="dashboard-content" width= "90%" height = "50%" justify-content= "center" align-items= "center" padding= "1rem">
-        <h1>Welcome to Your Dashboard</h1>
-        
-    </div>
-</HeadContent>
-
-<div class="dashboard-container" width= "90%" justify-content= "center" align-items= "center" padding= "1rem">
-    
-
-
-    <div class="hero-bg">
-        <div class="fade-in-box">
-           <a href= "/Historicservice" class="main-wrapper">
-            <h1>Service History</h1>
-            
-        </a>
-    </div>
+    </nav>
+    <div class="kpi-grid">
+        <div class="card blue-border">
+            <label>Total Repaired</label>
+            <div class="value">1,209<span>m³</span></div>
+            <p>Using POLYSOL Permanent Tech</p>
+        </div>
+        <div class="card blue-border chart-bg">
+            <label>Repair Durability</label>
+            <div class="value">5+ <span>Years</span></div>
+            <p>vs 1.2 years (Cold Mix)</p>
+        </div>
+        <div class="card yellow-border">
+            <label>25kg Bags Deployed</label>
+            <div class="value yellow-text">45,100</div>
+            <p>Inventory Level: Stable</p>
+        </div>
+        <div class="card blue-border">
+            <label>Community Savings</label>
+            <div class="value">R2.4M</div>
+            <p>Estimated Damage Avoided</p>
+        </div>
     </div>
 
-    <div class = "hero-bg">
-         <div class="fade-in-box">
-           <a href= "/services" class="main-wrapper">
-            <h1>Order Services</h1>
-            
-        </a>
-    </div>
-    </div>
-
-    <div class = "hero-bg">
-         <div class="fade-in-box">
-           <a href= "/profile" class="main-wrapper">
-            <h1>Profile</h1>
-            
-        </a>
-    </div>
-    
-    </div>
-    <div>
-        <section id="contact" class="text-center">
-        <h2 class="mb-4">Contact Us Today</h2>
-        <p class="mb-4">Ready to fix those potholes? Get in touch for a free assessment and quote.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <i class="bi bi-telephone display-6 text-primary mb-2"></i>
-                <h5>Call Us</h5>
-                <p>(555) 123-ROAD</p>
+    <div class="main-content">
+        <div class="map-view">
+            <div class="map-placeholder">
+                <div class="pulse-point"></div>
+                <div class="stable-zone"></div>
+                <span class="map-label">MUNICIPAL DATA LAYER - SOUTH AFRICA</span>
             </div>
-            <div class="col-md-4">
-                <i class="bi bi-envelope display-6 text-primary mb-2"></i>
-                <h5>Email Us</h5>
-                <p>info@roadsfix.com</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-geo-alt display-6 text-primary mb-2"></i>
-                <h5>Visit Us</h5>
-                <p>123 Road Way<br>City, State 12345</p>
+            <div class="map-footer">
+                📍 HQ: 6A Frikkie Van Kraayenburg St, East End
             </div>
         </div>
-    </section>
-    </div> 
+
+        <aside class="inventory-sidebar">
+            <h3>QUICK DISPATCH</h3>
+           
+            
+            <div class="contact-box">
+                <p>Support: <strong>071 005 5513</strong></p>
+            </div>
+        </aside>
+    </div>
 </div>
+
+
+
     
         
   

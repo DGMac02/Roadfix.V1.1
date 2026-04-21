@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AuthService.cs</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../doc-style.css" />
+  <script src="../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../";
+    var thisFile = "Services\\AuthService.cs";
+    var defaultSidebar = true;
+  </script>
+  <script src="../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>AuthService.cs</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="csharp"><span class="hljs-keyword">using</span> Microsoft.AspNetCore.Components;
+<span class="hljs-keyword">using</span> Microsoft.VisualBasic;
+<span class="hljs-keyword">using</span> Supabase.Gotrue;
+
+
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">RoadFix.Services</span><span class="hljs-comment">// Matches your folder name</span>
+
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AuthService</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> Supabase.Client _supabase;
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">readonly</span> NavigationManager _nav;        
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">AuthService</span>(<span class="hljs-params">Supabase.Client supabase, NavigationManager nav</span>)</span>
+    {
+        _supabase = supabase;
+        _nav = nav;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;<span class="hljs-keyword">bool</span>&gt; <span class="hljs-title">RegisterUser</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> email, <span class="hljs-keyword">string</span> password, <span class="hljs-keyword">string</span> firstName, <span class="hljs-keyword">string</span> lastName</span>)</span>
+{
+    <span class="hljs-keyword">try</span>
+    {
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-2" id="section-2"></a>
+</div>
+<p>Package the names into a dictionary so Supabase records them</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="csharp">        <span class="hljs-keyword">var</span> metadata = <span class="hljs-keyword">new</span> Dictionary&lt;<span class="hljs-keyword">string</span>, <span class="hljs-keyword">object</span>&gt;
+        {
+            { <span class="hljs-string">"first_name"</span>, firstName },
+            { <span class="hljs-string">"last_name"</span>, lastName }
+        };
+
+        <span class="hljs-keyword">var</span> options = <span class="hljs-keyword">new</span> Supabase.Gotrue.SignUpOptions { Data = metadata };
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-3" id="section-3"></a>
+</div>
+<p>Pass the options to the SignUp method</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="csharp">        <span class="hljs-keyword">var</span> session = <span class="hljs-keyword">await</span> _supabase.Auth.SignUp(email, password, options);
+        
+        <span class="hljs-keyword">return</span> session?.User != <span class="hljs-literal">null</span>;
+    }
+    <span class="hljs-keyword">catch</span> (Exception)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+}
+
+
+    
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task&lt;Session?&gt; Login(<span class="hljs-keyword">string</span> email, <span class="hljs-keyword">string</span> password)
+    {
+        <span class="hljs-keyword">try</span>
+        {
+            <span class="hljs-keyword">var</span> response = <span class="hljs-keyword">await</span> _supabase.Auth.SignIn(email, password);
+            <span class="hljs-keyword">return</span> response;
+        }
+        <span class="hljs-keyword">catch</span> (Exception ex)
+        {
+            Console.WriteLine(<span class="hljs-string">$"Login Failed: <span class="hljs-subst">{ex.Message}</span>"</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">async</span> Task <span class="hljs-title">Logout</span>(<span class="hljs-params"></span>)</span>
+    {
+        <span class="hljs-keyword">try</span>
+        {
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-4" id="section-4"></a>
+</div>
+<ol>
+<li>Tell Supabase to destroy the session</li>
+</ol>
+
+        </td>
+        <td class="code highlight">
+          <pre class="csharp">            <span class="hljs-keyword">await</span> _supabase.Auth.SignOut();
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-5" id="section-5"></a>
+</div>
+<ol start="2">
+<li>Redirect the user immediately to the login page</li>
+</ol>
+
+        </td>
+        <td class="code highlight">
+          <pre class="csharp">            _nav.NavigateTo(<span class="hljs-string">"login"</span>);
+        }
+        <span class="hljs-keyword">catch</span> (Exception ex)
+        {
+            Console.WriteLine(<span class="hljs-string">$"Logout Error: <span class="hljs-subst">{ex.Message}</span>"</span>);
+        }
+    }
+}}
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

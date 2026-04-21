@@ -1,85 +1,125 @@
 
-        body[b-1eewp5te7m], html[b-1eewp5te7m] {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow: hidden; /* Prevents scrolling on the welcome screen */
-        }
-        /* 2. THE FIX: Aggressive Link Reset */
-        /* This ensures the underline NEVER appears and the color stays white */
-        a.main-wrapper[b-1eewp5te7m], 
-        a.main-wrapper:link[b-1eewp5te7m], 
-        a.main-wrapper:visited[b-1eewp5te7m], 
-        a.main-wrapper:hover[b-1eewp5te7m], 
-        a.main-wrapper:active[b-1eewp5te7m] {
-            text-decoration: none !important; 
-            color: white !important;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-        /* 2. The Background Image with Fade/Overlay */
-        .hero-bg[b-1eewp5te7m] {
-            background-color: rgb(255, 255, 255);
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            padding: 1rem;
-            justify-content: center;
-            align-items: center;
-        }
+   /* Container & Theme */
+.dashboard-container[b-1eewp5te7m] {
+    background-color: #0f172a; /* Deep Navy */
+    color: #f1f5f9;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 2rem;
+    min-height: 100vh;
+}
 
-        /* 3. The Text Box with Animation */
-        .fade-in-box[b-1eewp5te7m] {
-            background: #0d6efd; /* Semi-transparent glass effect */
-                    /* Modern blur effect */
-            padding: 3rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: rgb(231, 98, 98);
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* Nav Styles */
+.top-nav[b-1eewp5te7m] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-            min-height: 80vh; 
-            width: 90%;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-            
-            /* Animation properties */
-            opacity: 0;
-            animation: fadeInTransition-b-1eewp5te7m 0.5s ease-in forwards;
-        }
-        .fade-in-box:hover[b-1eewp5te7m] {
-            background: #2c72dbfe;
-            transform: translateY(-5px);
-            border-color: rgba(255, 255, 255, 0.4);
-        }
+.logo-area h1[b-1eewp5te7m] {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0;
+}
 
-        h1[b-1eewp5te7m] {
-            font-size: 3rem;
-            margin-top: 250px;
-            margin-bottom: 250px;
-            margin-left: 400px;
-            margin-right: 400px;
-        }
+.blue-text[b-1eewp5te7m] { color: #38bdf8; }
+.logo-area small[b-1eewp5te7m] { font-size: 0.7rem; color: #64748b; display: block; }
 
-        p[b-1eewp5te7m] {
-            font-size: 1.2rem;
-            font-weight: 300;
-        }
+.status-indicator[b-1eewp5te7m] {
+    color: #38bdf8;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    animation: pulse-b-1eewp5te7m 2s infinite;
+}
 
-        /* 4. The Keyframe for Fading In */
-        @keyframes fadeInTransition-b-1eewp5te7m {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Subtle slide-up effect */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+/* KPI Cards */
+.kpi-grid[b-1eewp5te7m] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card[b-1eewp5te7m] {
+    background: rgba(30, 41, 59, 0.7);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.blue-border[b-1eewp5te7m] { border-left: 5px solid #38bdf8; }
+.yellow-border[b-1eewp5te7m] { border-left: 5px solid #ffd700; }
+
+.card label[b-1eewp5te7m] { font-size: 0.7rem; text-transform: uppercase; color: #94a3b8; }
+.card .value[b-1eewp5te7m] { font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0; }
+.card .value span[b-1eewp5te7m] { font-size: 1rem; color: #475569; margin-left: 4px; }
+.yellow-text[b-1eewp5te7m] { color: #ffd700; }
+
+/* Main Layout */
+.main-content[b-1eewp5te7m] {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.map-view[b-1eewp5te7m] {
+    background: #1e293b;
+    border-radius: 1rem;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #334155;
+}
+
+.map-placeholder[b-1eewp5te7m] {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(56,189,248,0.05) 0%, rgba(15,23,42,1) 100%);
+}
+
+.pulse-point[b-1eewp5te7m] {
+    width: 12px;
+    height: 12px;
+    background: #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #ffd700;
+    animation: mapPulse-b-1eewp5te7m 1.5s infinite;
+}
+
+/* Sidebar & Buttons */
+.inventory-sidebar[b-1eewp5te7m] {
+    background: rgba(15, 23, 42, 0.8);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.product-item[b-1eewp5te7m] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #334155;
+}
+
+.btn-blue[b-1eewp5te7m] { background: #38bdf8; color: #000; border: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+.btn-yellow[b-1eewp5te7m] { background: #ffd700; color: #000; border: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+
+/* Animations */
+@keyframes mapPulse-b-1eewp5te7m {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes pulse-b-1eewp5te7m {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+        
+      

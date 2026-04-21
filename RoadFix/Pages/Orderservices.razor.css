@@ -111,16 +111,16 @@ textarea.form-control {
     color: #343a40;
     border-color: #ced4da;
 }
-
+#map{
+    height:400px
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .card-body {
-        padding: 1.5rem;
-    }
-    
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
+    #map {
+    height: 250px;
+  }
+}
+.mapboxgl-marker {
+    position: absolute;
+    will-change: transform;
 }

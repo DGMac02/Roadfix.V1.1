@@ -85,7 +85,7 @@ private async Task LoadUserOrders()
     {
         // Parse the string ID from the session into a Guid
         <!--var userId = Guid.Parse(session.User.Id);-->
-        string userId = session.User.Id;
+        string userId = session.User.Id!; // Assuming Cus_id is stored as a string in the database
 
         var response = await supabase
             .From<Order>()

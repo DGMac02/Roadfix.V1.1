@@ -111,16 +111,16 @@ textarea.form-control[b-iaxu57h5cr] {
     color: #343a40;
     border-color: #ced4da;
 }
-
+#map[b-iaxu57h5cr]{
+    height:400px
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .card-body[b-iaxu57h5cr] {
-        padding: 1.5rem;
-    }
-    
-    .btn-lg[b-iaxu57h5cr] {
-        width: 100%;
-        margin-bottom: 1rem;
-        margin-right: 0 !important;
-    }
+    #map[b-iaxu57h5cr] {
+    height: 250px;
+  }
+}
+.mapboxgl-marker[b-iaxu57h5cr] {
+    position: absolute;
+    will-change: transform;
 }

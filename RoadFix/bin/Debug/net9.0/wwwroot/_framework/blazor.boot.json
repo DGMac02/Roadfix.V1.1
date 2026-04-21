@@ -1,7 +1,11 @@
 {
   "mainAssemblyName": "RoadFix",
   "resources": {
-    "hash": "sha256-WapLANdKsNJa8/uwwzN+i3CVz6ohvo5mKYcsYTs+M14=",
+<<<<<<< HEAD
+    "hash": "sha256-TuAwd3nz6ZqSXcsaZwUOOsYBzCTMrcSa/gVcJiQouSg=",
+=======
+    "hash": "sha256-UFAgXWWh+4miTgEoaG/yJa0r6Ve+OlnPvoecLiFffpk=",
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
     "fingerprinting": {
       "Supabase.Functions.w4gz1z4ill.wasm": "Supabase.Functions.wasm",
       "Supabase.Gotrue.gsal9ee3gm.wasm": "Supabase.Gotrue.wasm",
@@ -217,8 +221,13 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "RoadFix.2qulhobmlt.wasm": "RoadFix.wasm",
-      "RoadFix.rnha42g0cm.pdb": "RoadFix.pdb"
+<<<<<<< HEAD
+      "RoadFix.nw8daalvrk.wasm": "RoadFix.wasm",
+      "RoadFix.2uta9slvu5.pdb": "RoadFix.pdb"
+=======
+      "RoadFix.h625a8t4vp.wasm": "RoadFix.wasm",
+      "RoadFix.59x1qnbmuj.pdb": "RoadFix.pdb"
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
     },
     "jsModuleNative": {
       "dotnet.native.9ih887ebfz.js": "sha256-oS7IRiQoVt9ThQ7Y2UM3XoeY0JqPD02cg9IvRdufn2w="
@@ -444,10 +453,17 @@
       "WindowsBase.vy2l5u79y6.wasm": "sha256-ufB9Mo5joMyUs3DzXWWBFFIZNEVrt6h9N5stYB6Oln4=",
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
-      "RoadFix.2qulhobmlt.wasm": "sha256-ys9KdY9i2FE9GX6mQZPSGRP5JNMTZABG252m5NWkkbc="
+<<<<<<< HEAD
+      "RoadFix.nw8daalvrk.wasm": "sha256-VzDFGXcuEoVAvPVjn3r+yCi/z6Z+IUQSmGHQIP5eX2M="
     },
     "pdb": {
-      "RoadFix.rnha42g0cm.pdb": "sha256-50PoLfHBQatOik3BelqUW+7381ylWiqOuMQdQITTHtU="
+      "RoadFix.2uta9slvu5.pdb": "sha256-il4QHCi2DPNNdrcIoy8uCqW4jIouxqAgeZvHIvMC+aQ="
+=======
+      "RoadFix.h625a8t4vp.wasm": "sha256-tyvWYTD4nDCNAVQXzJV3NPDTOktSOmrSXdnD8f9DxeU="
+    },
+    "pdb": {
+      "RoadFix.59x1qnbmuj.pdb": "sha256-maQZ6L6at94I+cZBRHIh2eEmpWRh2Vtnb91yrt9BypU="
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
     }
   },
   "cacheBootResources": true,
