@@ -215,8 +215,6 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.c1a2sn96aa.wasm
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.p9dr06yz9l.pdb
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\Supabase.Functions.w4gz1z4ill.wasm.gz
@@ -435,8 +433,6 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.c1a2sn96aa.wasm.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.p9dr06yz9l.pdb.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\RoadFix.staticwebassets.runtime.json
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\RoadFix.staticwebassets.endpoints.json
@@ -890,7 +886,6 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\blazor.build.boot-e
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\blazor.boot.json
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\wqsy94viub-jfz4hvtstb.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\u5m8nsp19r-8ckefd6jnx.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\ryac5g5v18-k80ukphcb8.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\mln6z2yqo1-5ipweew5fc.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\dohif20qtl-bqjiyaj88i.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\qm6dpkdvzu-c2jlpeoesf.gz
@@ -1158,9 +1153,6 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\7cfkg5kf
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vjlmrz1foe-tjcz0u77k5.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\0hwc1125xm-tptq2av103.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\og1p53sh3n-lfu7j35m59.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98mlz-c1a2sn96aa.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-p9dr06yz9l.gz
-C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-xzi9q3yuf3.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\staticwebassets.development.json
@@ -1170,3 +1162,11 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\RoadFix.dll
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\refint\RoadFix.dll
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\RoadFix.pdb
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\ref\RoadFix.dll
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\ryac5g5v18-s9s1ns79av.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zxqjinv0i4.wasm
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zhtwffdn2k.pdb
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zxqjinv0i4.wasm.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\bin\Debug\net9.0\wwwroot\_framework\RoadFix.zhtwffdn2k.pdb.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98mlz-zxqjinv0i4.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-zhtwffdn2k.gz
+C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-ghh0t9ft11.gz

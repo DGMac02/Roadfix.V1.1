@@ -172,7 +172,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
     {
         _mapboxtoken = Configuration["MapboxToken"];
-        if (firstRender)
+        if (firstRender && !string.IsNullOrEmpty(_mapboxtoken))
         {
             // Give the browser a moment to ensure the 'map' div is rendered
             await Task.Delay(300);
