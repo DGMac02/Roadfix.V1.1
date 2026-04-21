@@ -7,5 +7,5 @@
 .env.local
 .env.*.local
 
-appsettings.json
+**/appsettings.json
 appsettings.Development.json

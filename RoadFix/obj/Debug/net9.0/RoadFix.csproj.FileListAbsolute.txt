@@ -1185,4 +1185,7 @@ C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\5makh98m
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\vv1isnq1vu-59x1qnbmuj.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\e9ss2hcp5t-qm86wc3ujc.gz
 C:\Users\mache\Desktop\Roadfix.V1.1\RoadFix\obj\Debug\net9.0\compressed\ryac5g5v18-ovmajlbe2u.gz
+<<<<<<< HEAD
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
+=======
 >>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201

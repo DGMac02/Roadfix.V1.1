@@ -2,7 +2,11 @@
   "mainAssemblyName": "RoadFix",
   "resources": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "hash": "sha256-TuAwd3nz6ZqSXcsaZwUOOsYBzCTMrcSa/gVcJiQouSg=",
+=======
+    "hash": "sha256-UFAgXWWh+4miTgEoaG/yJa0r6Ve+OlnPvoecLiFffpk=",
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
 =======
     "hash": "sha256-UFAgXWWh+4miTgEoaG/yJa0r6Ve+OlnPvoecLiFffpk=",
 >>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
@@ -222,8 +226,13 @@
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "RoadFix.nw8daalvrk.wasm": "RoadFix.wasm",
       "RoadFix.2uta9slvu5.pdb": "RoadFix.pdb"
+=======
+      "RoadFix.h625a8t4vp.wasm": "RoadFix.wasm",
+      "RoadFix.59x1qnbmuj.pdb": "RoadFix.pdb"
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
 =======
       "RoadFix.h625a8t4vp.wasm": "RoadFix.wasm",
       "RoadFix.59x1qnbmuj.pdb": "RoadFix.pdb"
@@ -454,10 +463,17 @@
       "mscorlib.xd6mv31d55.wasm": "sha256-1YSLR2eZt3ceALFV//vZUF2AloxVil3VlrW1zZYPSEI=",
       "netstandard.kaml52uspo.wasm": "sha256-HLEwBpLfzKw2/zGSVzHzFJxznCkt/WIjahrziiMrOpA=",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "RoadFix.nw8daalvrk.wasm": "sha256-VzDFGXcuEoVAvPVjn3r+yCi/z6Z+IUQSmGHQIP5eX2M="
     },
     "pdb": {
       "RoadFix.2uta9slvu5.pdb": "sha256-il4QHCi2DPNNdrcIoy8uCqW4jIouxqAgeZvHIvMC+aQ="
+=======
+      "RoadFix.h625a8t4vp.wasm": "sha256-tyvWYTD4nDCNAVQXzJV3NPDTOktSOmrSXdnD8f9DxeU="
+    },
+    "pdb": {
+      "RoadFix.59x1qnbmuj.pdb": "sha256-maQZ6L6at94I+cZBRHIh2eEmpWRh2Vtnb91yrt9BypU="
+>>>>>>> 6d7f5aef132f4c2cd01f1d06b378f96024785201
 =======
       "RoadFix.h625a8t4vp.wasm": "sha256-tyvWYTD4nDCNAVQXzJV3NPDTOktSOmrSXdnD8f9DxeU="
     },

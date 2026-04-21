@@ -20,7 +20,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card-body">
-                    <mapbox-search-box id="roadfix-search" access-token="pk.eyJ1Ijoicm9hZHNmaXgiLCJhIjoiY21ucmp3ZHExMDM2YTJxcXl6cHQwZDYzNiJ9.HLly-ID-5Sftsfo_KBoMjQ" placeholder="Let's find Pothole address..." proximity="ip"  ></mapbox-search-box>
+                    <mapbox-search-box id="roadfix-search" access-token=_mapboxtoken placeholder="Let's find Pothole address..." proximity="ip"  ></mapbox-search-box>
                                      
                 </div>
                
@@ -166,7 +166,6 @@
         public bool Insurance {get; set;} = false;
         
     }
-//private string MapboxToken = "pk.eyJ1Ijoicm9hZHNmaXgiLCJhIjoiY21ucmp3ZHExMDM2YTJxcXl6cHQwZDYzNiJ9.HLly-ID-5Sftsfo_KBoMjQ";
     private string? _mapboxtoken;
 private DotNetObjectReference<Orderservices>? objRef;
 protected override async Task OnAfterRenderAsync(bool firstRender)
