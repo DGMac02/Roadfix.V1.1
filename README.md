@@ -9,7 +9,8 @@ CSS
 Blazor
 PostGre(Supabase platform)
 
-Addirtionally used
+Additionally used
 OAuth Services
 Automated email confirmation services
 Cloudflare and on the main oage google workspace hosting.
+Digital Mapping API GlobBox Integrated to dynamically mark potholes ona map.
